@@ -1,0 +1,43 @@
+:root {
+   --background: #24254c;
+}
+
+* {
+   color: #0f0f14f3;
+}
+
+.main-detail-container {
+   display: flex;
+   flex-direction: row;
+
+   height: 100vh;
+   width: 100%;
+}
+
+.img-container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   .img {
+      height: 28rem;
+      border-radius: .2rem;
+   }
+
+   .name {
+      font-size: 1.8rem;
+      padding-bottom: 8rem;
+   }
+}
+
+.details {
+   height: 12rem;
+   width: 100%;
+   padding: 2rem 4rem;
+}
+
+.detail-item {
+   margin-top: 2rem;
+}
