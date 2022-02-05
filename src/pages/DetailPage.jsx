@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+
+// NPM
 import axios from 'axios';
+import { Oval } from 'react-loader-spinner';
 
 // Components
 import Detail from '../components/Detail';
@@ -8,14 +11,12 @@ import Detail from '../components/Detail';
 // Image
 import loaderImg from '../images/loading.png';
 
-// Css
-import './DetailsPage.css';
-
 const DetailPage = () => {
 	const [usedata, setdata] = useState();
 	const navigate = useNavigate();
 	const { id } = useParams();
-	useEffect(async () => {
+
+	useEffect(() => {
 		const FetchShow = async (id) => {
 			try {
 				let data = await (await axios(`https://api.tvmaze.com/shows/${id}`)).data;
@@ -41,7 +42,7 @@ const DetailPage = () => {
 		FetchShow(id);
 	}, []);
 
-	return <>{usedata ? <Detail props={usedata} /> : <img className='small-loader' src={loaderImg} />}</>;
+	return <>{usedata ? <Detail props={usedata} /> : <Oval ariaLabel='loading-indicator' height={50} width={50} strokeWidth={1} strokeWidthSecondary={2000} color='#19191E' secondaryColor='grey' />}</>;
 };
 
 export default DetailPage;
