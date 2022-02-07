@@ -1,5 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
+// Npm
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 // GlobalStateObject
 import useGlobalState from '../state/index';
 
@@ -34,7 +37,7 @@ const ShowCard = ({ props }) => {
 		<></>
 	) : (
 		<div className='image-container' onClick={() => goto(props.id)}>
-			<img className='show-poster' src={image} />
+			<LazyLoadImage className='show-poster' src={image} />
 			{
 				<>
 					<div className='rating' style={{ outline: `3.5px ${color} solid` }}>
