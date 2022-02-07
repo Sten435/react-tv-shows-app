@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import DetailPage from './pages/DetailPage';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 				<Route exact path='/details/:id' element={<DetailPage />} />
 				<Route path='*' element={<Navigate to='/' />} />
 			</Routes>
+			<Footer />
 		</BrowserRouter>
 	);
 }

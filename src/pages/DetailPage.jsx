@@ -42,7 +42,25 @@ const DetailPage = () => {
 		FetchShow(id);
 	}, []);
 
-	return <>{usedata ? <Detail props={usedata} /> : <Oval ariaLabel='loading-indicator' height={50} width={50} strokeWidth={1} strokeWidthSecondary={2000} color='#19191E' secondaryColor='grey' />}</>;
+	return (
+		<>
+			{usedata ? (
+				<Detail props={usedata} />
+			) : (
+				<div className='container'>
+					<Oval
+						ariaLabel='loading-indicator'
+						height={50}
+						width={50}
+						strokeWidth={1}
+						strokeWidthSecondary={2000}
+						color='#19191E'
+						secondaryColor='grey'
+					/>
+				</div>
+			)}
+		</>
+	);
 };
 
 export default DetailPage;
