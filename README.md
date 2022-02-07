@@ -1,6 +1,6 @@
 This project was created with react.
 
-This project uses the api from [https://www.tvmaze.com/]tvmaze.com.
+This project uses the api from [https://www.tvmaze.com/](tvmaze.com).
 All data about the show comes directly from the api.
 
 In the project directory, you can run:
